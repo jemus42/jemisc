@@ -27,3 +27,14 @@ remotes::install_github("jemus42/jemisc")
 
 ## Example
 
+```{r, message=FALSE}
+library(dplyr)
+library(ggplot2)
+library(rmarkdown)
+library(knitr)
+
+library(jemisc)
+cite_loaded_pkgs() %>%
+  kable()
+```
+
