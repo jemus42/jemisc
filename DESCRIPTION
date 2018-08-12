@@ -10,9 +10,14 @@ Imports:
     devtools,
     magrittr,
     purrr,
-    dplyr
+    dplyr,
+    readr,
+    tibble,
+    stringr,
+    utils,
+    rvest
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 6.0.1
+RoxygenNote: 6.1.0

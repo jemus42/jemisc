@@ -2,4 +2,11 @@
 
 export("%>%")
 export(cite_loaded_pkgs)
+export(get_rs_version)
+export(make_pkg_bib)
+export(rs_daily)
 importFrom(magrittr,"%>%")
+importFrom(rvest,html_attr)
+importFrom(rvest,html_node)
+importFrom(stringr,str_extract)
+importFrom(xml2,read_html)

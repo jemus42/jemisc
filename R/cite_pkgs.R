@@ -6,10 +6,13 @@
 #' @examples
 #' cite_loaded_pkgs()
 cite_loaded_pkgs <- function() {
+
+  Loaded <- Source <- Package <- NULL
+
   sess <- devtools::session_info()
 
   text_cite <- function(Package) {
-    citation(package = Package) %>%
+    utils::citation(package = Package) %>%
       unclass %>%
       magrittr::extract2(1) %>%
       attr("textVersion") %>%
