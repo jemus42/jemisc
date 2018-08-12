@@ -5,9 +5,9 @@
 #' @importFrom stringr str_extract
 #' @examples
 #' \dontrun{
-#' get_rs_version()
+#' rs_version()
 #' }
-get_rs_version <- function() {
+rs_version <- function() {
   plist <- readLines("/Applications/RStudio.app/Contents/Info.plist")
   unique(stringr::str_extract(plist, "\\d\\.\\d\\.\\d+"))[[2]] %>% as.package_version()
 }
