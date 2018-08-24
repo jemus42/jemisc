@@ -2,14 +2,12 @@
 #'
 #' @return A `character` of length 1
 #' @export
-#' @importFrom stringr str_extract
 #' @examples
 #' \dontrun{
 #' rs_version()
 #' }
 rs_version <- function() {
-  plist <- readLines("/Applications/RStudio.app/Contents/Info.plist")
-  unique(stringr::str_extract(plist, "\\d\\.\\d\\.\\d+"))[[2]] %>% as.package_version()
+  .rs.api.versionInfo()$version
 }
 
 #' Get Current RStudio Daily Version
