@@ -26,3 +26,21 @@ rs_daily <- function() {
     rvest::html_attr("href") %>%
     stringr::str_extract("\\d\\.\\d\\.\\d+") %>% as.package_version()
 }
+
+#' Get Current RStudio Preview Version
+#'
+#' @return A `character` of length 1
+#' @export
+#' @importFrom xml2 read_html
+#' @importFrom rvest html_node
+#' @importFrom rvest html_text
+#' @importFrom stringr str_extract
+#' @examples
+#' rs_preview()
+rs_preview <- function() {
+  xml2::read_html("https://www.rstudio.com/products/rstudio/download/preview/") %>%
+    rvest::html_node("h2:nth-child(1)") %>%
+    rvest::html_text() %>%
+    stringr::str_extract("\\d\\.\\d\\.\\d+") %>%
+    as.package_version()
+}
