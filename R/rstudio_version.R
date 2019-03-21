@@ -1,4 +1,4 @@
-#' Get Current RStudio Version
+#' Get Currently Installed RStudio Version
 #'
 #' @return A `character` of length 1
 #' @export
