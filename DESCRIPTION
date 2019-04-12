@@ -1,21 +1,27 @@
 Package: jemisc
-Title: What the Package Does (One Line, Title Case)
-Version: 0.0.0.9000
-Authors@R: person('Lukas', 'Burk', email = 'lukas@quantenbrot.de', role = c('aut', 'cre'))
-Description: What the package does (one paragraph).
+Title: Personal Collection of Stuff and Things
+Version: 0.0.1
+Authors@R: 
+    person(given = "Lukas",
+           family = "Burk",
+           role = c("aut", "cre"),
+           email = "lukas@quantenbrot.de")
+Description: Just another personal R package.
 License: MIT + file LICENSE
 Depends: 
     R (>= 3.1)
 Imports: 
     devtools,
+    dplyr,
     magrittr,
     purrr,
-    dplyr,
     readr,
-    tibble,
-    stringr,
-    utils,
+    rmarkdown,
     rvest,
+    sessioninfo,
+    stringr,
+    tibble,
+    utils,
     xml2
 ByteCompile: true
 Encoding: UTF-8

@@ -10,7 +10,7 @@
 #' \dontrun{
 #' make_pkg_bib(output = "~/packages.bib")
 #' }
-make_pkg_bib <- function(output = "~/Documents/BibTex/Rstats.bib", fresh = TRUE) {
+make_pkg_bib <- function(output = "~/Documents/BibTex/rstats.bib", fresh = TRUE) {
 
   if (fresh) file.remove(output)
 

@@ -4,7 +4,7 @@
 \alias{make_pkg_bib}
 \title{Create a .bib for Your Installed Packages}
 \usage{
-make_pkg_bib(output = "~/Documents/BibTex/Rstats.bib", fresh = TRUE)
+make_pkg_bib(output = "~/Documents/BibTex/rstats.bib", fresh = TRUE)
 }
 \arguments{
 \item{output}{Location of the output \code{.bib}.}

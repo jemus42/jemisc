@@ -1,5 +1,7 @@
 ---
-output: github_document
+output: 
+  github_document:
+    df_print: kable
 ---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
@@ -19,7 +21,7 @@ This is a personal package for various, i.e. *misc* things.
 
 ## Installation
 
-You can install the released version of jemisc from GitHub with:
+You can install the current version of jemisc from GitHub with:
 
 ```r
 remotes::install_github("jemus42/jemisc")
@@ -28,12 +30,10 @@ remotes::install_github("jemus42/jemisc")
 ## Example
 
 ```{r, message=FALSE}
-library(dplyr)
-library(ggplot2)
 library(rmarkdown)
 library(knitr)
-
 library(jemisc)
+
 cite_loaded_pkgs() %>%
   kable()
 ```

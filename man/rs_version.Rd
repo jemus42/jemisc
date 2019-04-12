@@ -2,7 +2,7 @@
 % Please edit documentation in R/rstudio_version.R
 \name{rs_version}
 \alias{rs_version}
-\title{Get Current RStudio Version}
+\title{Get Currently Installed RStudio Version}
 \usage{
 rs_version()
 }
@@ -10,7 +10,7 @@ rs_version()
 A \code{character} of length 1
 }
 \description{
-Get Current RStudio Version
+Get Currently Installed RStudio Version
 }
 \examples{
 \dontrun{
