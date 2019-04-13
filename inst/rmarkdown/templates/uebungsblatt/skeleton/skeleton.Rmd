@@ -10,4 +10,17 @@ output: jemisc::uebungsblatt
 # source("setup.R")
 ```
 
-# Aufgabe x.1
+# Aufgabe 1.1
+
+This is neat: $e^{\pi i} + 1 = 0$.
+
+Also this is kinda of a biggie:
+
+$$
+\frac{1}{n} \sum_{i=1}^n x_i
+$$
+Also this one:
+
+$$
+\frac{1}{n-1} \sum_{i=1}^n \left(x_i - \bar{x}\right)^2
+$$
