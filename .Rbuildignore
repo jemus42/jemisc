@@ -3,3 +3,5 @@
 ^LICENSE\.md$
 ^jemisc\.Rproj$
 ^README\.Rmd$
+^preview\.pdf$
+^preview\.Rmd$

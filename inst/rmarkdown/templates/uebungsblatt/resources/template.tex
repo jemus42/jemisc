@@ -7,9 +7,9 @@
 % Declutter a lot of stuff and fixate on xelatex
 \documentclass[ngerman,a4paper]{scrartcl}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% KOMA script class for headings and stuff %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% KOMA class / headings   %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[headsepline,footsepline]{scrlayer-scrpage}
 \usepackage{lastpage}
 \clearpairofpagestyles
@@ -24,17 +24,17 @@
 \ifoot{$date$}
 \ofoot{\pagemark}
 
-%%%%%%%%%%%%%%%%%%%%
-%%% Line spacing %%%
-%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Line spacing            %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 $if(linestretch)$
 \usepackage{setspace}
 \setstretch{$linestretch$}
 $endif$
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Font stuff and symbols and what not %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Font stuff and symbols  %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{amssymb,amsmath}
 \usepackage{mathspec}
 \usepackage{fontspec}
@@ -55,9 +55,9 @@ $endif$
 
 \usepackage[margin=2cm]{geometry}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% HYPER HYPER... links %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% HYPER HYPER... links    %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{hyperref}
 $if(colorlinks)$
 \PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
@@ -127,9 +127,9 @@ $if(verbatim-in-note)$
   \VerbatimFootnotes % allows verbatim text in footnotes
 $endif$
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Tables and graphics %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Tables and graphics     %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{longtable,booktabs}
 \usepackage{graphicx,grffile}
 \makeatletter
@@ -151,9 +151,9 @@ $if(strikeout)$
 \pdfstringdefDisableCommands{\renewcommand{\sout}{}}
 $endif$
 
-%%%%%%%%%%%%%%%%%%%
-%%% Indentation %%%
-%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Indentation             %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 $if(indent)$
 $else$
   \setlength{\parindent}{0pt}
@@ -164,18 +164,18 @@ $endif$
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
 
-%%%%%%%%%%%%%%%%%%%%%%%
-%%% Section numbers %%%
-%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Section numbers         %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 $if(numbersections)$
   \setcounter{secnumdepth}{5}
 $else$
   \setcounter{secnumdepth}{0}
 $endif$
 
-%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% Paragraph things? %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% Paragraph things?       %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 $if(subparagraph)$
 $else$
 % Redefines (sub)paragraphs to behave more like sections
@@ -197,9 +197,9 @@ $for(header-includes)$
 $header-includes$
 $endfor$
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% The actual document %%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% The actual document     %%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
 
 $for(include-before)$
