@@ -12,15 +12,21 @@ uebungsblatt <- function(toc = FALSE,
                          fig_crop = TRUE,
                          fig_caption = TRUE,
                          df_print = "kable",
-                         highlight = "kate",
+                         highlight = "default",
                          keep_tex = FALSE,
                          includes = NULL,
                          md_extensions = NULL,
                          pandoc_args = NULL,
                          extra_dependencies = NULL) {
 
-  template <- system.file("rmarkdown", "templates",
-                          "uebungsblatt", "resources", "template.tex", package = "jemisc")
+  template <- system.file("rmarkdown/templates/uebungsblatt/resources/template.tex",
+                          package = "jemisc")
+  if (identical(highlight, "default")) {
+    highlight <- system.file("rmarkdown/templates/uebungsblatt/resources/highlight-kate-mod.theme",
+                             package = "jemisc")
+    pandoc_args <- paste0(pandoc_args, "--highlight-style=", highlight)
+    highlight <- NULL
+  }
 
 
   pdf_document(toc = toc,

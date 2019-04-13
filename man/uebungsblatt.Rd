@@ -6,7 +6,7 @@
 \usage{
 uebungsblatt(toc = FALSE, toc_depth = 2, number_sections = FALSE,
   fig_width = 6.5, fig_height = 4.5, fig_crop = TRUE,
-  fig_caption = TRUE, df_print = "kable", highlight = "kate",
+  fig_caption = TRUE, df_print = "kable", highlight = "default",
   keep_tex = FALSE, includes = NULL, md_extensions = NULL,
   pandoc_args = NULL, extra_dependencies = NULL)
 }
