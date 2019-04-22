@@ -1,9 +1,9 @@
+% !TeX program = xelatex
 % copied from https://github.com/rstudio/rmarkdown/blob/master/inst/rmd/latex/default-1.17.0.2.tex
-
 % Notable changes:
 % build around KOMA-script classes: primarily scrartcl and package scrlayer-scrpage for headings
 % Note: Do *not* use fancyhdr with this, also parskip is discouraged
-% Do *not* conditionally load graphicx, always load it instead (depended on "graphics" param?)
+% Does *not* conditionally load graphicx, always loads it instead (depended on "graphics" param)
 % Declutter a lot of stuff and fixate on xelatex
 \documentclass[ngerman,a4paper]{scrartcl}
 
@@ -36,19 +36,16 @@ $endif$
 %%% Font stuff and symbols  %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{amssymb,amsmath}
+% Note: mathspec loads fontspec anyway and things complain if fontspec is loaded before mathspec
 \usepackage{mathspec}
-\usepackage{fontspec}
 \defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
 
-\setmainfont{TeX Gyre Pagella} % Palatino Linotype
-
-%\setsansfont{Roboto Condensed}
+\setmainfont{TeX Gyre Pagella}
 \setsansfont{TeX Gyre Heros}
-
 \setmonofont[Mapping=tex-ansi]{Fira Code}
 
-%\setmathfont(Digits,Latin,Greek){Palatino Linotype}
-\setmathfont(Digits,Latin,Greek){TeX Gyre Termes Math}
+% Useing the (sets) makes math non-italics for some reason?
+\setmathfont{TeX Gyre Pagella Math}
 %\setmathfont(Digits,Latin,Greek){TeX Gyre Pagella Math}
 
 % use upquote if available, for straight quotes in verbatim environments
