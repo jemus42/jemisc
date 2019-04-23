@@ -39,15 +39,34 @@ $endif$
 % Note: mathspec loads fontspec anyway and things complain if fontspec is loaded before mathspec
 %\usepackage{mathspec}
 \usepackage{unicode-math}
-\defaultfontfeatures{Ligatures=TeX,Scale=MatchLowercase}
-
-\setmainfont{TeX Gyre Pagella}
-\setsansfont{TeX Gyre Heros}
-\setmonofont[Mapping=tex-ansi]{Fira Code}
+\defaultfontfeatures{Ligatures=TeX}%,Scale=MatchLowercase}
 
 % Useing the (sets) makes math non-italics for some reason?
-\setmathfont{TeX Gyre Termes Math}
 %\setmathfont(Digits,Latin,Greek){TeX Gyre Pagella Math}
+
+$if(mainfont)$
+  \setmainfont[$for(mainfontoptions)$$mainfontoptions$$sep$,$endfor$]{$mainfont$}
+$else$
+  \setmainfont{TeX Gyre Pagella}
+$endif$
+
+$if(sansfont)$
+  \setsansfont[$for(sansfontoptions)$$sansfontoptions$$sep$,$endfor$]{$sansfont$}
+$else$
+  \setsansfont{TeX Gyre Heros}
+$endif$
+
+$if(monofont)$
+  \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
+$else$
+  \setmonofont[Mapping=tex-ansi]{Fira Code}
+$endif$
+
+$if(mathfont)$
+  \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
+$else$
+  \setmathfont{TeX Gyre Termes Math}
+$endif$
 
 % use upquote if available, for straight quotes in verbatim environments
 \usepackage{upquote}
