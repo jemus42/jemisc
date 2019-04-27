@@ -4,7 +4,10 @@
 \alias{pkg_export}
 \title{Export installed packages for somehwat functional reinstallation}
 \usage{
-pkg_export()
+pkg_export(old_lib = "~/Library/R/shared_bak/")
+}
+\arguments{
+\item{old_lib}{\code{character}: The location of your previous package library.}
 }
 \description{
 Export installed packages for somehwat functional reinstallation

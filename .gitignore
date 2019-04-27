@@ -8,4 +8,5 @@ preview.Rmd
 #
 fiddle.R
 pkgs.rds
-reimport.R
+cran-reinstall.R
+github-reinstall.R

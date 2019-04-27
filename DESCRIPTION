@@ -22,7 +22,9 @@ Imports:
     stringr,
     tibble,
     utils,
-    xml2
+    xml2,
+    pak,
+    glue
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
