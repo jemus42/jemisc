@@ -3,6 +3,7 @@
 export("%>%")
 export(cite_loaded_pkgs)
 export(make_pkg_bib)
+export(pkg_export)
 export(rs_daily)
 export(rs_preview)
 export(rs_version)

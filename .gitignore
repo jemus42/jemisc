@@ -4,3 +4,8 @@
 .Ruserdata
 preview.pdf
 preview.Rmd
+
+#
+fiddle.R
+pkgs.rds
+pkg-reimport.R
