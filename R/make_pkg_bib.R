@@ -5,7 +5,11 @@
 #'
 #' @return Nothing
 #' @export
-#'
+#' @importFrom tibble as_tibble
+#' @importFrom utils installed.packages
+#' @importFrom utils toBibtex
+#' @importFrom stringr str_replace
+#' @importFrom readr write_lines
 #' @examples
 #' \dontrun{
 #' make_pkg_bib(output = "~/packages.bib")

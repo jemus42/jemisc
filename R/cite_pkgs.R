@@ -2,7 +2,13 @@
 #'
 #' @return A tbl
 #' @export
-#'
+#' @importFrom sessioninfo session_info
+#' @importFrom magrittr extract2
+#' @importFrom utils citation
+#' @importFrom dplyr filter
+#' @importFrom dplyr select
+#' @importFrom dplyr mutate
+#' @importFrom purrr map_chr
 #' @examples
 #' cite_loaded_pkgs()
 cite_loaded_pkgs <- function() {
