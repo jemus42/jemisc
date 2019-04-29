@@ -59,7 +59,7 @@ $endif$
 $if(monofont)$
   \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
 $else$
-  \setmonofont[Mapping=tex-ansi]{Fira Code}
+  \setmonofont[Mapping=tex-ansi,Scale=0.75]{Fira Code}
 $endif$
 
 $if(mathfont)$
