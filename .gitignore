@@ -10,3 +10,6 @@ fiddle.R
 pkgs.rds
 cran-reinstall.R
 github-reinstall.R
+
+testing*
+mathjax.js
