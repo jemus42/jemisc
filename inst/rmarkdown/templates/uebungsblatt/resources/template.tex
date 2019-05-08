@@ -38,7 +38,13 @@ $endif$
 \usepackage{amssymb,amsmath}
 % Note: mathspec loads fontspec anyway and things complain if fontspec is loaded before mathspec
 %\usepackage{mathspec}
-\usepackage{unicode-math}
+
+% unicode-math seems to be the preferred superset of mathspec (and fontspec?)
+% ISO means bold math is set italics, =TeX would make bold math upright
+\usepackage[bold-style=ISO]{unicode-math}
+% To make regular \boldsymbol be like \symbf (bold greek letters etc.)
+% this makes e.g. bold beta work in both PDF and mathjax (in HTML output)
+\renewcommand{\boldsymbol}[1]{\symbf{#1}}
 \defaultfontfeatures{Ligatures=TeX}%,Scale=MatchLowercase}
 
 % Useing the (sets) makes math non-italics for some reason?
@@ -240,6 +246,7 @@ $endfor$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% The actual document     %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\allowdisplaybreaks
 \begin{document}
 
 $for(include-before)$
