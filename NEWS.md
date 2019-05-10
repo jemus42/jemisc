@@ -1,5 +1,6 @@
 # jemisc 0.0.1
 
+* Added some TeX-helpers
 * Added custom rmarkdown PDF template
 * Added functions to check available and installed RStudio dev versions
 * Added functions to cite packages easily
