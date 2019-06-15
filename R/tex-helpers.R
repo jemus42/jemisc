@@ -18,24 +18,41 @@
 #' }
 render_tex_files <- function(path, cleanup = TRUE, tex_fun = tinytex::xelatex, to_png = TRUE) {
   tex_files <- list.files(path, pattern = ".tex$", full.names = TRUE, recursive = TRUE)
-  lapply(tex_files, tex_fun)
+  #lapply(tex_files, tex_fun)
+
+  # Rendering PDFs
+  for (texfile in tex_files) {
+    pdffile <- sub(".tex", ".pdf", texfile)
+    pngfile <- sub(".tex", ".png", texfile)
+
+    pdf_exists <- file.exists(pdffile)
+    pdf_old <- if (pdf_exists) file.mtime(texfile) > file.mtime(pdffile) else TRUE
+
+    # Render PDF if tex is newer than PDF
+    if (all(!pdf_exists, pdf_old)) {
+      cat("Converting ", texfile, " to PDF\n")
+      tex_fun(texfile)
+    }
+
+    # PDF -> png if requested and PDF is newer than png
+    if (to_png) {
+      png_exists <- file.exists(pngfile)
+      png_old <- if (png_exists) file.mtime(texfile) > file.mtime(pngfile) else TRUE
+
+      if (all(!png_exists, png_old)) {
+        cat("Converting ", pdffile, " to png\n")
+        command <- paste("convert -density 300 -flatten -colorspace RGB",
+                         shQuote(pdffile), shQuote(pngfile))
+        cat(command, "\n")
+        system(command)
+      }
+    }
+  }
 
   # Cleanup
   if (cleanup) {
     garbage <- list.files(path, pattern = ".aux$|.fls$|.synctex.gz$|.xdv$|.log$", full.names = TRUE)
-    file.remove(garbage)
-  }
-
-  # Convert to png?
-  if (to_png) {
-    f_pdfs <- shQuote(list.files(path, pattern = ".pdf$", full.names = TRUE, recursive = TRUE))
-
-    for (pdf in f_pdfs) {
-      f_png <- sub("\\.pdf", ".png", pdf)
-      command <- paste("convert -density 300 -flatten -colorspace RGB", pdf, f_png)
-      cat(command, "\n")
-      system(command)
-    }
+    dummy <- file.remove(garbage)
   }
 }
 
