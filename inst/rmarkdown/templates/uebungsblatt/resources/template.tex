@@ -5,7 +5,7 @@
 % Note: Do *not* use fancyhdr with this, also parskip is discouraged
 % Does *not* conditionally load graphicx, always loads it instead (depended on "graphics" param)
 % Declutter a lot of stuff and fixate on xelatex
-\documentclass[ngerman,a4paper]{scrartcl}
+\documentclass[ngerman,a4paper,$fontsize$]{scrartcl}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% KOMA class / headings   %%%
@@ -87,7 +87,7 @@ $endif$
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage{hyperref}
 $if(colorlinks)$
-\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
+%\PassOptionsToPackage{usenames,dvipsnames}{color} % color is loaded by hyperref
 $endif$
 
 \hypersetup{unicode=true,
@@ -102,9 +102,9 @@ $if(keywords)$
 $endif$
 $if(colorlinks)$
             colorlinks=true,
-            linkcolor=$if(linkcolor)$$linkcolor$$else$Maroon$endif$,
+            linkcolor=$if(linkcolor)$$linkcolor$$else$Black$endif$,
             citecolor=$if(citecolor)$$citecolor$$else$Blue$endif$,
-            urlcolor=$if(urlcolor)$$urlcolor$$else$Blue$endif$,
+            urlcolor=$if(urlcolor)$$urlcolor$$else$SteelBlue$endif$,
 $else$
             pdfborder={0 0 0},
 $endif$
@@ -147,7 +147,7 @@ $endif$
 
 % Load {xcolor} *before* syntax highlighting is going to load {color}, which messes
 % things up. Also, we need the [table] option for kableExtra
-\usepackage[table]{xcolor}
+\usepackage[table,svgnames]{xcolor}
 
 $if(highlighting-macros)$
   $highlighting-macros$
