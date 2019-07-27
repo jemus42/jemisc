@@ -6,30 +6,34 @@ Authors@R:
            family = "Burk",
            role = c("aut", "cre"),
            email = "lukas@quantenbrot.de")
-Description: Just another personal R package.
+Description: Just another personal R package. This package
+    provides no greater value to the R community, it is merely a place for
+    me to dump stuff that I ended up writing and found mildly useful.
 License: MIT + file LICENSE
 Depends: 
     R (>= 3.1)
 Imports: 
+    cli,
     devtools,
     dplyr,
+    glue,
+    janitor,
     magrittr,
+    pak,
     purrr,
     readr,
+    rlang (>= 0.1.2),
     rmarkdown,
     rvest,
     sessioninfo,
     stringr,
     tibble,
     utils,
-    xml2,
-    pak,
-    glue,
-    janitor,
-    rlang,
-    cli
+    xml2
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 6.1.1
+Suggests: 
+    roxygen2
