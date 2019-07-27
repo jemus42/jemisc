@@ -24,7 +24,10 @@ Imports:
     utils,
     xml2,
     pak,
-    glue
+    glue,
+    janitor,
+    rlang,
+    cli
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true

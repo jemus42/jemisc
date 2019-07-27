@@ -5,3 +5,7 @@
 ^README\.Rmd$
 ^preview\.pdf$
 ^preview\.Rmd$
+^mathjax\.js$
+^pkgs\.rds$
+^fiddle\.R$
+^testing.*$
