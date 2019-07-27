@@ -25,3 +25,8 @@ pkg_export <- function(old_lib = "~/Library/R/shared_bak/") {
     glue_data("if (!'{package}' %in% installed.packages()) remotes::install_github('{remoteusername}/{remoterepo}')") %>%
     writeLines("github-reinstall.R")
 }
+
+globalVariables(c(
+  "package", "title", "version", "repository", "remotetype", "remoterepo",
+  "remoteusername"
+))
