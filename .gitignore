@@ -13,3 +13,4 @@ github-reinstall.R
 
 testing*
 mathjax.js
+.Rprofile

@@ -11,9 +11,15 @@ sr_d6 <- function(n) {
   throw <- sort(sample(1:6, size = n, replace = TRUE))
 
   glitches <- sum(throw == 1)
+  glitched <- glitches >= (n/2)
   successes <- sum(throw >= 5)
 
-  ret <- list(n = n, throw = throw, glitches = glitches, successes = successes)
+  ret <- list(
+    n = n, throw = throw,
+    glitches = glitches, glitched = glitched,
+    successes = successes
+  )
+
   class(ret) <- c("sr_d6", "list")
   ret
 }
@@ -57,7 +63,7 @@ colorize_d6 <- function(throw, collapse = TRUE) {
 #' sr_d6(5)
 print.sr_d6 <- function(x, ...) {
   warns <- col_black(bg_red(style_bold(paste0(rep(symbol$warning, 3), collapse = ""))))
-  fail_indicator <- ifelse(x$glitches > x$n/2, warns, "     ")
+  fail_indicator <- ifelse(x$glitched, warns, "     ")
 
   cat(glue::glue(
     "{style_underline(style_bold(col_cyan(x$n)), 'd6')} \\
