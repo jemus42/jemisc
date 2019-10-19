@@ -29,7 +29,8 @@ Imports:
     stringr,
     tibble,
     utils,
-    xml2
+    xml2,
+    bookdown
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
