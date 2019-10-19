@@ -15,16 +15,17 @@
   %footsepline
 ]{scrlayer-scrpage}
 %\usepackage{lastpage}
-%\clearpairofpagestyles
-%\pagestyle{scrheadings}
+\clearpairofpagestyles
+\pagestyle{scrheadings}
 % \renewcommand*\pagemark{{\usekomafont{pagenumber}Seite\nobreakspace\thepage von \pageref{LastPage}}}
-%\addtokomafont{pageheadfoot}{\upshape}
+\addtokomafont{pageheadfoot}{\upshape}
 
 % Set header/footer info
 %\ohead{$author$}
 %\chead{$title$}
 %\ihead{$subject$}
 %\ifoot{$date$}
+\cfoot*{\pagemark}
 %\ofoot{\thepage} % \pagemark
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -277,7 +278,7 @@ $endif$
 $endif$
 
 % Absatzeinzug und Abstand
-%\setlength{\parindent}{0.5cm}
+\setlength{\parindent}{0.25cm}
 %\setlength{\parskip}{0.1cm}
 
 $body$
