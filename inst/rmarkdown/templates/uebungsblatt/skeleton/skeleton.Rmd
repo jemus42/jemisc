@@ -1,26 +1,23 @@
 ---
-title: "Aufgabenblatt X"
-subject: "Veranstaltungstitel"
-author: "Presumably You"
+title: "Aufgabenblatt XX"
+subject: "FACH"
+author: "Lukas Burk"
 date: "Stand: `r format(Sys.time(), '%F %H:%M Uhr')`"
-output: jemisc::uebungsblatt
+fontsize: 10pt
+mathfont: "Asana Math"
+monofont: "Fira Mono"
+colorlinks: yes
+output:
+  jemisc::uebungsblatt:
+    keep_tex: no
+editor_options:
+  chunk_output_type: console
 ---
 
-```{r setup, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
-# source("setup.R")
+```{r setup, include=FALSE}
+source("setup.R")
 ```
 
-# Aufgabe 1.1
-
-This is neat: $e^{\pi i} + 1 = 0$.
-
-Also this is kinda of a biggie:
-
-$$
-\frac{1}{n} \sum_{i=1}^n x_i
-$$
-Also this one:
-
-$$
-\frac{1}{n-1} \sum_{i=1}^n \left(x_i - \bar{x}\right)^2
-$$
+```{r link, echo=FALSE, message=FALSE, warning=FALSE, results='asis'}
+insert_crosslink()
+```
