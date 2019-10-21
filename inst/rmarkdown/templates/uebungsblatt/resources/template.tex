@@ -10,6 +10,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% KOMA class / headings   %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{bookmark} % KOMA suggests this
 \usepackage[headsepline,footsepline]{scrlayer-scrpage}
 \usepackage{lastpage}
 \clearpairofpagestyles
@@ -41,7 +42,14 @@ $endif$
 
 % unicode-math seems to be the preferred superset of mathspec (and fontspec?)
 % ISO means bold math is set italics, =TeX would make bold math upright
-\usepackage[bold-style=ISO]{unicode-math}
+% TeX seems a little nicer, probably font-dependent.
+
+$if(boldstyle)$
+  \usepackage[bold-style=$boldstyle$]{unicode-math}
+$else$
+  \usepackage[bold-style=ISO]{unicode-math}
+$endif$
+
 % To make regular \boldsymbol be like \symbf (bold greek letters etc.)
 % this makes e.g. bold beta work in both PDF and mathjax (in HTML output)
 \renewcommand{\boldsymbol}[1]{\symbf{#1}}
@@ -65,13 +73,13 @@ $endif$
 $if(monofont)$
   \setmonofont[Mapping=tex-ansi$if(monofontoptions)$,$for(monofontoptions)$$monofontoptions$$sep$,$endfor$$endif$]{$monofont$}
 $else$
-  \setmonofont[Mapping=tex-ansi,Scale=0.75]{Fira Code}
+  \setmonofont[Mapping=tex-ansi,Scale=0.75]{Fira Mono}
 $endif$
 
 $if(mathfont)$
   \setmathfont[$for(mathfontoptions)$$mathfontoptions$$sep$,$endfor$]{$mathfont$}
 $else$
-  \setmathfont{TeX Gyre Termes Math}
+  \setmathfont{Asana Math}
 $endif$
 
 % use upquote if available, for straight quotes in verbatim environments

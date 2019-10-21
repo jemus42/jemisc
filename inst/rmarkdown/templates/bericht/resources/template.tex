@@ -5,11 +5,12 @@
 % Note: Do *not* use fancyhdr with this, also parskip is discouraged
 % Does *not* conditionally load graphicx, always loads it instead (depended on "graphics" param)
 % Declutter a lot of stuff and fixate on xelatex
-\documentclass[ngerman,a4paper,$fontsize$,bibliography=totoc]{scrreprt}
+\documentclass[ngerman,a4paper,bibliography=totoc,$fontsize$]{scrreprt}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% KOMA class / headings   %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage{bookmark} % KOMA suggests this
 \usepackage[
   %headsepline,
   %footsepline
