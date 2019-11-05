@@ -7,8 +7,9 @@
 uebungsblatt(toc = FALSE, toc_depth = 2, number_sections = FALSE,
   fig_width = 6.5, fig_height = 4.5, fig_crop = TRUE,
   fig_caption = TRUE, df_print = "kable", highlight = "default",
-  keep_tex = FALSE, includes = NULL, md_extensions = NULL,
-  pandoc_args = NULL, extra_dependencies = NULL)
+  keep_tex = FALSE, includes = NULL, citation_package = "none",
+  md_extensions = NULL, pandoc_args = NULL,
+  extra_dependencies = NULL)
 }
 \arguments{
 \item{toc}{\code{TRUE} to include a table of contents in the output}
@@ -45,6 +46,9 @@ by setting the option \code{rmarkdown.df_print} to \code{FALSE}.}
 
 \item{includes}{Named list of additional content to include within the
 document (typically created using the \code{\link{includes}} function).}
+
+\item{citation_package}{The LaTeX package to process citations, \code{natbib}
+or \code{biblatex}. Use \code{none} if neither package is to be used.}
 
 \item{md_extensions}{Markdown extensions to be added or removed from the
 default definition or R Markdown. See the \code{\link{rmarkdown_format}} for

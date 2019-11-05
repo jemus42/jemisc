@@ -280,7 +280,7 @@ $endif$
 $body$
 
 $if(biblatex)$
-\printbibliography$if(biblio-title)$[title=$biblio-title$]$endif$
+\printbibliography[title=$if(biblio-title)$$biblio-title$$else$Literatur$endif$]
 $endif$
 
 $for(include-after)$
