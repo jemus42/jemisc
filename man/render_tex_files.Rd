@@ -4,8 +4,12 @@
 \alias{render_tex_files}
 \title{Render a bunch of small .tex files}
 \usage{
-render_tex_files(path, cleanup = TRUE, tex_fun = tinytex::xelatex,
-  to_png = TRUE)
+render_tex_files(
+  path,
+  cleanup = TRUE,
+  tex_fun = tinytex::xelatex,
+  to_png = TRUE
+)
 }
 \arguments{
 \item{path}{Folder where \code{.tex} files are.}

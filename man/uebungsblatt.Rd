@@ -4,12 +4,23 @@
 \alias{uebungsblatt}
 \title{Übungszettel PDF Template}
 \usage{
-uebungsblatt(toc = FALSE, toc_depth = 2, number_sections = FALSE,
-  fig_width = 6.5, fig_height = 4.5, fig_crop = TRUE,
-  fig_caption = TRUE, df_print = "kable", highlight = "default",
-  keep_tex = FALSE, includes = NULL, citation_package = "none",
-  md_extensions = NULL, pandoc_args = NULL,
-  extra_dependencies = NULL)
+uebungsblatt(
+  toc = FALSE,
+  toc_depth = 2,
+  number_sections = FALSE,
+  fig_width = 6.5,
+  fig_height = 4.5,
+  fig_crop = TRUE,
+  fig_caption = TRUE,
+  df_print = "kable",
+  highlight = "default",
+  keep_tex = FALSE,
+  includes = NULL,
+  citation_package = "none",
+  md_extensions = NULL,
+  pandoc_args = NULL,
+  extra_dependencies = NULL
+)
 }
 \arguments{
 \item{toc}{\code{TRUE} to include a table of contents in the output}
@@ -28,15 +39,16 @@ uebungsblatt(toc = FALSE, toc_depth = 2, number_sections = FALSE,
 \item{fig_caption}{\code{TRUE} to render figures with captions}
 
 \item{df_print}{Method to be used for printing data frames. Valid values
-include "default", "kable", "tibble", and "paged". The "default" method uses
+include "default", "kable", "tibble", and "paged". The "default" method
+uses a corresponding S3 method of \code{print}, typically
 \code{print.data.frame}. The "kable" method uses the
 \code{\link[knitr:kable]{knitr::kable}} function. The "tibble" method uses
 the \pkg{tibble} package to print a summary of the data frame. The "paged"
 method creates a paginated HTML table (note that this method is only valid
-for formats that produce HTML). In addition
-to the named methods you can also pass an arbitrary function to be used
-for printing data frames. You can disable the \code{df_print} behavior entirely
-by setting the option \code{rmarkdown.df_print} to \code{FALSE}.}
+for formats that produce HTML). In addition to the named methods you can
+also pass an arbitrary function to be used for printing data frames. You
+can disable the \code{df_print} behavior entirely by setting the option
+\code{rmarkdown.df_print} to \code{FALSE}.}
 
 \item{highlight}{Syntax highlighting style. Supported styles include
 "default", "tango", "pygments", "kate", "monochrome", "espresso",
@@ -45,13 +57,13 @@ by setting the option \code{rmarkdown.df_print} to \code{FALSE}.}
 \item{keep_tex}{Keep the intermediate tex file used in the conversion to PDF}
 
 \item{includes}{Named list of additional content to include within the
-document (typically created using the \code{\link{includes}} function).}
+document (typically created using the \code{\link[rmarkdown]{includes}} function).}
 
 \item{citation_package}{The LaTeX package to process citations, \code{natbib}
 or \code{biblatex}. Use \code{none} if neither package is to be used.}
 
 \item{md_extensions}{Markdown extensions to be added or removed from the
-default definition or R Markdown. See the \code{\link{rmarkdown_format}} for
+default definition or R Markdown. See the \code{\link[rmarkdown]{rmarkdown_format}} for
 additional details.}
 
 \item{pandoc_args}{Additional command line options to pass to pandoc}

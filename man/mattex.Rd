@@ -9,10 +9,10 @@ mattex(mat, type = "pmatrix", round = 3)
 \arguments{
 \item{mat}{A \link{matrix}.}
 
-\item{type}{\code{[character(1): "pmatrix"]}: Matrix environment to use, e.g. \code{bmatrix} for \code{[]}-enclosed
-(brackets) or \code{pmatrix} for \code{()} (parentheses).}
+\item{type}{\verb{[character(1): "pmatrix"]}: Matrix environment to use, e.g. \code{bmatrix} for \verb{[]}-enclosed
+(brackets) or \code{pmatrix} for \verb{()} (parentheses).}
 
-\item{round}{\code{[integer(1): 3]}}
+\item{round}{\verb{[integer(1): 3]}}
 }
 \value{
 Nothing, output is \code{cat}ed.

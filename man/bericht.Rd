@@ -4,11 +4,23 @@
 \alias{bericht}
 \title{Bericht PDF Template}
 \usage{
-bericht(toc = FALSE, toc_depth = 2, number_sections = FALSE,
-  fig_width = 6.5, fig_height = 4.5, fig_crop = TRUE,
-  fig_caption = TRUE, df_print = "kable", highlight = "default",
-  keep_tex = FALSE, pandoc_args = NULL, dev = "cairo_pdf",
-  latex_engine = "xelatex", citation_package = "biblatex", ...)
+bericht(
+  toc = FALSE,
+  toc_depth = 2,
+  number_sections = FALSE,
+  fig_width = 6.5,
+  fig_height = 4.5,
+  fig_crop = TRUE,
+  fig_caption = TRUE,
+  df_print = "kable",
+  highlight = "default",
+  keep_tex = FALSE,
+  pandoc_args = NULL,
+  dev = "cairo_pdf",
+  latex_engine = "xelatex",
+  citation_package = "biblatex",
+  ...
+)
 }
 \arguments{
 \item{number_sections}{Whether to number section headers: if \code{TRUE},
