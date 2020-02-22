@@ -44,3 +44,21 @@ rs_preview <- function() {
     stringr::str_extract("\\d\\.\\d\\.\\d+") %>%
     as.package_version()
 }
+
+#' Get Current RStudio Version
+#'
+#' @return A `character` of length 1
+#' @export
+#' @importFrom xml2 read_html
+#' @importFrom rvest html_node
+#' @importFrom rvest html_text
+#' @importFrom stringr str_extract
+#' @examples
+#' rs_release()
+rs_release <- function() {
+  xml2::read_html("https://rstudio.com/products/rstudio/download/#download") %>%
+    rvest::html_node("#download") %>%
+    rvest::html_text() %>%
+    stringr::str_extract("\\d\\.\\d\\.\\d+") %>%
+    as.package_version()
+}
