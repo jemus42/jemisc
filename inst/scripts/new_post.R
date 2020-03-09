@@ -91,9 +91,10 @@ xfun::in_dir(blogdown:::site_root(), local({
           warning('The filename is empty!', call. = FALSE)
         )
         if (is.null(getOption('blogdown.author'))) options(blogdown.author = input$author)
-        blogdown::new_post(
+        jemisc::new_post(
           input$title, author = input$author, ext = input$format,
           categories = input$cat, tags = input$tag,
+          shows = meta$shows, packages = meta$packages,
           file = gsub('[-[:space:]]+', '-', input$file),
           slug = if (input$slug != '') input$slug, subdir = input$subdir,
           date = input$date, kind = input$kind
