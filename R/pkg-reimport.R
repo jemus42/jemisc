@@ -2,7 +2,6 @@
 #'
 #' @param old_lib `character`: The location of your previous package library.
 #' @export
-#' @importFrom pak lib_status
 #' @importFrom tibble as_tibble
 #' @importFrom glue glue_data
 #' @importFrom dplyr select

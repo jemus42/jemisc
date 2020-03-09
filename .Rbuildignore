@@ -9,3 +9,5 @@
 ^pkgs\.rds$
 ^fiddle\.R$
 ^testing.*$
+^bericht\..*$
+^references\.bib$

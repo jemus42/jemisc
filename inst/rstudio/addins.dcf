@@ -1,0 +1,4 @@
+Name: New Post
+Description: Create a new post with jemisc::new_post().
+Binding: new_post_addin
+Interactive: true

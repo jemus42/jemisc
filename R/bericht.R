@@ -1,9 +1,8 @@
 #' Bericht PDF Template
 #'
 #' @inheritParams bookdown::pdf_document2
-#'
-#' @export
 #' @importFrom bookdown pdf_document2
+#' @export
 bericht <- function(toc = FALSE,
                          toc_depth = 2,
                          number_sections = FALSE,
@@ -30,7 +29,7 @@ bericht <- function(toc = FALSE,
   }
 
 
-  pdf_document2(toc = toc,
+  bookdown::pdf_document2(toc = toc,
                toc_depth = toc_depth,
                number_sections = number_sections,
                fig_width = fig_width,
