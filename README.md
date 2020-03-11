@@ -3,6 +3,12 @@
 
 # jemisc
 
+<!-- badges: start -->
+
+[![Travis build
+status](https://travis-ci.org/jemus42/jemisc.svg?branch=master)](https://travis-ci.org/jemus42/jemisc)
+<!-- badges: end -->
+
 This is a personal package for various, i.e. *misc* things.
 
 ## Installation
@@ -24,7 +30,7 @@ cite_loaded_pkgs() %>%
   kable()
 ```
 
-| Package   | Version | Source         | Attribution                                                                                                                                                                                                                                                                         |
-| :-------- | :------ | :------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| knitr     | 1.22    | CRAN (R 3.5.2) | Yihui Xie (2019). knitr: A General-Purpose Package for Dynamic Report Generation in R. R package version 1.22.                                                                                                                                                                      |
-| rmarkdown | 1.12    | CRAN (R 3.5.2) | JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi and Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and Winston Chang and Richard Iannone (2019). rmarkdown: Dynamic Documents for R. R package version 1.12. URL <https://rmarkdown.rstudio.com>. |
+| Package   | Version | Source         | Attribution                                                                                                                                                                                                                                                                        |
+| :-------- | :------ | :------------- | :--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| knitr     | 1.28    | CRAN (R 3.6.2) | Yihui Xie (2020). knitr: A General-Purpose Package for Dynamic Report Generation in R. R package version 1.28.                                                                                                                                                                     |
+| rmarkdown | 2.1     | CRAN (R 3.6.0) | JJ Allaire and Yihui Xie and Jonathan McPherson and Javier Luraschi and Kevin Ushey and Aron Atkins and Hadley Wickham and Joe Cheng and Winston Chang and Richard Iannone (2020). rmarkdown: Dynamic Documents for R. R package version 2.1. URL <https://rmarkdown.rstudio.com>. |
