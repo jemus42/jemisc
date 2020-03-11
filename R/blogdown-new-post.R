@@ -2,6 +2,9 @@
 #'
 #' This is a modified version of `blogdown::new_post` for extra taxonomies.
 #' @param title The title of the post.
+#' @param kind The archetype to use.
+#' @param open Whether to open the post in the editor, defaults to `TRUE` if in
+#' an interactive setting.
 #' @param author The author of the post.
 #' @param categories A character vector of category names.
 #' @param tags A character vector of tag names.

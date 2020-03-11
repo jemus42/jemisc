@@ -24,6 +24,11 @@ new_post(
 \arguments{
 \item{title}{The title of the post.}
 
+\item{kind}{The archetype to use.}
+
+\item{open}{Whether to open the post in the editor, defaults to \code{TRUE} if in
+an interactive setting.}
+
 \item{author}{The author of the post.}
 
 \item{categories}{A character vector of category names.}

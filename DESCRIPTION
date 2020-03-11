@@ -20,14 +20,12 @@ Imports:
     magrittr,
     purrr,
     rlang (>= 0.1.2),
-    rmarkdown,
     rvest,
     sessioninfo,
     stringr,
     tibble,
     utils,
-    xml2,
-    bookdown
+    xml2
 Suggests: 
     blogdown,
     devtools,
