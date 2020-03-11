@@ -7,6 +7,8 @@
 
 [![Travis build
 status](https://travis-ci.org/jemus42/jemisc.svg?branch=master)](https://travis-ci.org/jemus42/jemisc)
+[![CRAN
+status](https://www.r-pkg.org/badges/version/jemisc)](https://CRAN.R-project.org/package=jemisc)
 <!-- badges: end -->
 
 This is a personal package for various, i.e. *misc* things.
