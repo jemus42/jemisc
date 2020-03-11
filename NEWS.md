@@ -1,3 +1,8 @@
+# jemisc 0.0.2
+
+* Remove Rmd template and put them into [`{jermd}`](https://git.tadaa-data.de/lukas/jermd).
+* Add `new_post()` function + RStudio addin for use with `{blogdown}`. This version adds additional taxonomie "packages" and "shows".
+
 # jemisc 0.0.1
 
 * Add `sr_d6` for dicerolls
