@@ -5,15 +5,13 @@
 
 <!-- badges: start -->
 
-[![Travis build
-status](https://travis-ci.org/jemus42/jemisc.svg?branch=master)](https://travis-ci.org/jemus42/jemisc)
 [![CRAN
 status](https://www.r-pkg.org/badges/version/jemisc)](https://CRAN.R-project.org/package=jemisc)
 [![R build
 status](https://github.com/jemus42/jemisc/workflows/R-CMD-check/badge.svg)](https://github.com/jemus42/jemisc/actions)
 <!-- badges: end -->
 
-This is a personal package for various, i.e. *misc* things.
+This is just a personal package for various, i.e. *misc* things.
 
 ## Installation
 
@@ -22,6 +20,8 @@ You can install the current version of jemisc from GitHub with:
 ``` r
 remotes::install_github("jemus42/jemisc")
 ```
+
+…but there’s no reason to, really.
 
 ## Example
 

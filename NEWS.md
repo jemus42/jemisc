@@ -1,3 +1,8 @@
+# jemisc 0.0.3
+
+* Switch to GitHub actions because travis is being weird with pkgdown deployment.
+* Add simple [coolors.co](http://coolors.co/) URL parser to extract RGB colors as a vector.
+
 # jemisc 0.0.2
 
 * Remove Rmd template and put them into [`{jermd}`](https://git.tadaa-data.de/lukas/jermd).
