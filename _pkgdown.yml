@@ -1,6 +1,6 @@
 destination: "."
 
-references:
+reference:
 - title: RStudio version infos
   contents:
   - starts_with("rs_")
