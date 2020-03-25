@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Roll some d6 for Shadowrun — sr_d6 • jemisc</title>
+<title>Get a color palette from a coolors.co URL — coolors_pal • jemisc</title>
 
 
 <!-- jquery -->
@@ -39,8 +39,8 @@
 
 
 
-<meta property="og:title" content="Roll some d6 for Shadowrun — sr_d6" />
-<meta property="og:description" content="Roll some d6 for Shadowrun" />
+<meta property="og:title" content="Get a color palette from a coolors.co URL — coolors_pal" />
+<meta property="og:description" content="Get a color palette from a coolors.co URL" />
 
 
 
@@ -111,33 +111,37 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-    <h1>Roll some d6 for Shadowrun</h1>
-    <small class="dont-index">Source: <a href='https://github.com/jemus42/jemisc/blob/master/R/shadowrun_dice.R'><code>R/shadowrun_dice.R</code></a></small>
-    <div class="hidden name"><code>sr_d6.Rd</code></div>
+    <h1>Get a color palette from a coolors.co URL</h1>
+    <small class="dont-index">Source: <a href='https://github.com/jemus42/jemisc/blob/master/R/coolors.R'><code>R/coolors.R</code></a></small>
+    <div class="hidden name"><code>coolors_pal.Rd</code></div>
     </div>
 
     <div class="ref-description">
-    <p>Roll some d6 for Shadowrun</p>
+    <p>Get a color palette from a coolors.co URL</p>
     </div>
 
-    <pre class="usage"><span class='fu'>sr_d6</span>(<span class='no'>n</span>)</pre>
+    <pre class="usage"><span class='fu'>coolors_pal</span>(<span class='no'>url</span>)</pre>
 
     <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
-      <th>n</th>
-      <td><p>Number of d6 to roll</p></td>
+      <th>url</th>
+      <td><p>The link to a coolors.co palette, e.g.
+<code>"https://coolors.co/29adb2-182326-2a3a3f-69818c-8ea4b2"</code></p></td>
     </tr>
     </table>
 
     <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
 
-    <p>A <code>list</code> of additional class <code>"sr_d6"</code>.</p>
+    <p><code><a href='https://rdrr.io/r/base/character.html'>character(5)</a></code> with RGB color codes, e.g.
+<code><a href='https://rdrr.io/r/base/c.html'>c("#29adb2", "#182326", "#2a3a3f", "#69818c", "#8ea4b2")</a></code> for the example <code>url</code>.</p>
+    <h2 class="hasAnchor" id="note"><a class="anchor" href="#note"></a>Note</h2>
+
+    <p>It's only the URL that's parsed, there's no need for an internet connection.</p>
 
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
-    <pre class="examples"><div class='input'><span class='fu'>sr_d6</span>(<span class='fl'>10</span>)</div><div class='output co'>#&gt; <span style='color: #00BBBB;font-weight: bold;text-decoration: underline;'>10</span><span style='text-decoration: underline;'>d6</span><span> ❯ </span><span style='background-color: #BB0000;'>1</span><span> </span><span style='color: #555555;background-color: #000000;'>2</span><span> </span><span style='color: #555555;background-color: #000000;'>3</span><span> </span><span style='color: #555555;background-color: #000000;'>3</span><span> </span><span style='background-color: #00BB00;'>5</span><span> </span><span style='background-color: #00BB00;'>5</span><span> </span><span style='background-color: #00BB00;'>5</span><span> </span><span style='background-color: #00BB00;'>6</span><span> </span><span style='background-color: #00BB00;'>6</span><span> </span><span style='background-color: #00BB00;'>6</span><span>
-#&gt;       --- </span><span style='font-weight: bold;'>1</span><span> </span><span style='color: #BB0000;'>ⓧ</span><span> - </span><span style='font-weight: bold;'>6</span><span> </span><span style='color: #00BB00;'>✔</span><span> ---</div></span></pre>
+    <pre class="examples"><div class='input'><span class='fu'>coolors_pal</span>(<span class='st'>"https://coolors.co/29adb2-182326-2a3a3f-69818c-8ea4b2"</span>)</div><div class='output co'>#&gt; [1] "#29adb2" "#182326" "#2a3a3f" "#69818c" "#8ea4b2"</div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="pkgdown-sidebar">
     <nav id="toc" data-toggle="toc" class="sticky-top">
