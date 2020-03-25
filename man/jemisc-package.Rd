@@ -10,6 +10,14 @@ Just another personal R package. This package
     provides no greater value to the R community, it is merely a place for
     me to dump stuff that I ended up writing and found mildly useful.
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://github.com/jemus42/jemisc}
+  \item Report bugs at \url{https://github.com/jemus42/jemisc/issues}
+}
+
+}
 \author{
 \strong{Maintainer}: Lukas Burk \email{lukas@quantenbrot.de}
 
