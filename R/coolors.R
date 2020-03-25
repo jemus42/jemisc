@@ -3,6 +3,8 @@
 #' @param url The link to a coolors.co palette, e.g.
 #' `"https://coolors.co/29adb2-182326-2a3a3f-69818c-8ea4b2"`
 #' @note It's only the URL that's parsed, there's no need for an internet connection.
+#' The `url` does not need to be valid, since only hex strings of length 6 (i.e.
+#' color codes like `F75AB1`) are looked for, and a `#` is prepended.
 #' @return `character(5)` with RGB color codes, e.g.
 #' `c("#29adb2", "#182326", "#2a3a3f", "#69818c", "#8ea4b2")` for the example `url`.
 #' @importFrom stringr str_extract_all str_pad

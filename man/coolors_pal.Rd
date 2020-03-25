@@ -19,6 +19,8 @@ Get a color palette from a coolors.co URL
 }
 \note{
 It's only the URL that's parsed, there's no need for an internet connection.
+The \code{url} does not need to be valid, since only hex strings of length 6 (i.e.
+color codes like \code{F75AB1}) are looked for, and a \verb{#} is prepended.
 }
 \examples{
 coolors_pal("https://coolors.co/29adb2-182326-2a3a3f-69818c-8ea4b2")
