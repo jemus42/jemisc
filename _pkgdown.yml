@@ -2,23 +2,23 @@ destination: "."
 
 references:
 - title: RStudio version infos
-- contents:
+  contents:
   - starts_with("rs_")
 
 - title: Package (citation) helpers
-- contents:
+  contents:
   - contains("pkg")
 
 - title: Shadowrun dice
-- contents:
+  contents:
   - sr_d6
   - sr_d6.print
 
 - title: LaTeX
-- contents:
+  contents:
   - mattex
   - render_tex_files
 
 - title: Blogdown helpers
-- contents:
+  contents:
   - new_post
