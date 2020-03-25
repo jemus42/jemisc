@@ -12,7 +12,7 @@ reference:
 - title: Shadowrun dice
   contents:
   - sr_d6
-  - sr_d6.print
+  - print.sr_d6
 
 - title: LaTeX
   contents:
@@ -22,3 +22,8 @@ reference:
 - title: Blogdown helpers
   contents:
   - new_post
+
+- title: Misc stuff
+  contents:
+  - coolors_pal
+  - tidyxtab
