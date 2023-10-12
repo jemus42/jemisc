@@ -17,11 +17,11 @@ tidyxtab <- function(data, x, y, row_name = deparse(x), col_name = deparse(y)) {
   x <- enquo(x)
   y <- enquo(y)
 
-  data %>%
-    tabyl(!!x, !!y) %>%
-    adorn_totals(where = c("row", "col")) %>%
-    adorn_percentages(denominator = "all") %>%
-    adorn_pct_formatting(rounding = "half up") %>%
-    adorn_ns(position = "front") %>%
+  data |>
+    tabyl(!!x, !!y) |>
+    adorn_totals(where = c("row", "col")) |>
+    adorn_percentages(denominator = "all") |>
+    adorn_pct_formatting(rounding = "half up") |>
+    adorn_ns(position = "front") |>
     adorn_title(row_name = row_name, col_name = col_name)
 }

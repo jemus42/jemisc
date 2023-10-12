@@ -1,3 +1,8 @@
+# jemisc 0.0.4.9000
+
+* Remove blogdown helper
+* Remove magrittr import and re-export
+
 # jemisc 0.0.3
 
 * Switch to GitHub actions because travis is being weird with pkgdown deployment.

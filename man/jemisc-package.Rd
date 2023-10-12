@@ -6,9 +6,7 @@
 \alias{jemisc-package}
 \title{jemisc: Personal Collection of Stuff and Things}
 \description{
-Just another personal R package. This package
-    provides no greater value to the R community, it is merely a place for
-    me to dump stuff that I ended up writing and found mildly useful.
+Just another personal R package. This package provides no greater value to the R community, it is merely a place for me to dump stuff that I ended up writing and found mildly useful.
 }
 \seealso{
 Useful links:

@@ -21,10 +21,10 @@ rs_version <- function() {
 #' @examples
 #' rs_daily()
 rs_daily <- function() {
-  xml2::read_html("https://dailies.rstudio.com") %>%
-    rvest::html_node("#ql-rstudio-oss-mac") %>%
-    rvest::html_attr("href") %>%
-    stringr::str_extract("\\d\\.\\d\\.\\d+") %>% as.package_version()
+  xml2::read_html("https://dailies.rstudio.com") |>
+    rvest::html_node("#ql-rstudio-oss-mac") |>
+    rvest::html_attr("href") |>
+    stringr::str_extract("\\d\\.\\d\\.\\d+") |> as.package_version()
 }
 
 #' Get Current RStudio Preview Version
@@ -38,10 +38,10 @@ rs_daily <- function() {
 #' @examples
 #' rs_preview()
 rs_preview <- function() {
-  xml2::read_html("https://www.rstudio.com/products/rstudio/download/preview/") %>%
-    rvest::html_node("h2:nth-child(1)") %>%
-    rvest::html_text() %>%
-    stringr::str_extract("\\d\\.\\d\\.\\d+") %>%
+  xml2::read_html("https://www.rstudio.com/products/rstudio/download/preview/") |>
+    rvest::html_node("h2:nth-child(1)") |>
+    rvest::html_text() |>
+    stringr::str_extract("\\d\\.\\d\\.\\d+") |>
     as.package_version()
 }
 
@@ -56,9 +56,9 @@ rs_preview <- function() {
 #' @examples
 #' rs_release()
 rs_release <- function() {
-  xml2::read_html("https://rstudio.com/products/rstudio/download/#download") %>%
-    rvest::html_node("#download") %>%
-    rvest::html_text() %>%
-    stringr::str_extract("\\d\\.\\d\\.\\d+") %>%
+  xml2::read_html("https://rstudio.com/products/rstudio/download/#download") |>
+    rvest::html_node("#download") |>
+    rvest::html_text() |>
+    stringr::str_extract("\\d\\.\\d\\.\\d+") |>
     as.package_version()
 }

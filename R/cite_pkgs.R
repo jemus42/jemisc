@@ -3,7 +3,6 @@
 #' @return A tbl
 #' @export
 #' @importFrom sessioninfo session_info
-#' @importFrom magrittr extract2
 #' @importFrom utils citation
 #' @importFrom dplyr filter
 #' @importFrom dplyr select
@@ -18,15 +17,16 @@ cite_loaded_pkgs <- function() {
   sess <- sessioninfo::session_info()
 
   text_cite <- function(package) {
-    utils::citation(package = package) %>%
-      unclass %>%
-      magrittr::extract2(1) %>%
-      attr("textVersion") %>%
+    res <- utils::citation(package = package) |>
+      unclass()
+
+    res[[1]] |>
+      attr("textVersion") |>
       trimws()
   }
 
-  tibble::as_tibble(sess$packages) %>%
-    dplyr::filter(attached, source != "local") %>%
-    dplyr::select(Package = package, Version = loadedversion, Source = source) %>%
+  tibble::as_tibble(sess$packages) |>
+    dplyr::filter(attached, source != "local") |>
+    dplyr::select(Package = package, Version = loadedversion, Source = source) |>
     dplyr::mutate(Attribution = purrr::map_chr(Package, text_cite))
 }

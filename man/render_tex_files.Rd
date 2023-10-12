@@ -16,7 +16,7 @@ render_tex_files(
 
 \item{cleanup}{\code{TRUE}: Whether to cleanup auxilliary files (e.g. \code{.aux}, \code{.log}, ...)}
 
-\item{tex_fun}{Which function to use, default ist \link[tinytex:xelatex]{tinytex::xelatex}.}
+\item{tex_fun}{Which function to use, default ist \link[tinytex:latexmk]{tinytex::xelatex}.}
 
 \item{to_png}{\code{TRUE}: Whether to use \code{convert} to convert PDF to png.}
 }
@@ -26,7 +26,7 @@ Nothing
 \description{
 Use case: A bunch of stuff done in LaTeXiT, resulting in some helper calculations
 or derivations contained in tex files. These are then rendered to PDF using \code{tex_fun}, per
-default \link[tinytex:xelatex]{tinytex::xelatex}, and then optionally converted to \code{png} using the system \code{convert}
+default \link[tinytex:latexmk]{tinytex::xelatex}, and then optionally converted to \code{png} using the system \code{convert}
 tool via imagemagick.
 }
 \examples{

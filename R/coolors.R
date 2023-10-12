@@ -12,7 +12,7 @@
 #' @examples
 #' coolors_pal("https://coolors.co/29adb2-182326-2a3a3f-69818c-8ea4b2")
 coolors_pal <- function(url) {
-  url %>%
-    str_extract_all("([a-f0-9]){6}", simplify = TRUE) %>%
+  url |>
+    str_extract_all("([a-f0-9]){6}", simplify = TRUE) |>
     str_pad(7, "left", "#")
 }
