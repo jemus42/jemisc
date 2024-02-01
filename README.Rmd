@@ -20,6 +20,7 @@ knitr::opts_chunk$set(
 <!-- badges: start -->
 [![CRAN status](https://www.r-pkg.org/badges/version/jemisc)](https://CRAN.R-project.org/package=jemisc)
 [![R build status](https://github.com/jemus42/jemisc/workflows/R-CMD-check/badge.svg)](https://github.com/jemus42/jemisc/actions)
+[![R-CMD-check](https://github.com/jemus42/jemisc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jemus42/jemisc/actions/workflows/R-CMD-check.yaml)
 <!-- badges: end -->
 
 
@@ -36,13 +37,3 @@ remotes::install_github("jemus42/jemisc")
 ...but there's no reason to, really.
 
 ## Example
-
-```{r, message=FALSE}
-library(rmarkdown)
-library(knitr)
-library(jemisc)
-
-cite_loaded_pkgs() %>%
-  kable()
-```
-

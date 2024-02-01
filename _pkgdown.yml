@@ -1,29 +1,4 @@
-destination: "."
+url: https://jemus42.github.io/jemisc/
+template:
+  bootstrap: 5
 
-reference:
-- title: RStudio version infos
-  contents:
-  - starts_with("rs_")
-
-- title: Package (citation) helpers
-  contents:
-  - contains("pkg")
-
-- title: Shadowrun dice
-  contents:
-  - sr_d6
-  - print.sr_d6
-
-- title: LaTeX
-  contents:
-  - mattex
-  - render_tex_files
-
-- title: Blogdown helpers
-  contents:
-  - new_post
-
-- title: Misc stuff
-  contents:
-  - coolors_pal
-  - tidyxtab

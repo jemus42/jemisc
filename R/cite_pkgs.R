@@ -16,17 +16,19 @@ cite_loaded_pkgs <- function() {
 
   sess <- sessioninfo::session_info()
 
-  text_cite <- function(package) {
-    res <- utils::citation(package = package) |>
-      unclass()
+  bibtexify <- function(package) {
+    cit <- utils::citation(package = package)
 
-    res[[1]] |>
-      attr("textVersion") |>
-      trimws()
+    bibtex <- toBibtex(cit)
+
+    paste0(as.character(bibtex), collapse = "\n")
+
   }
 
   tibble::as_tibble(sess$packages) |>
     dplyr::filter(attached, source != "local") |>
     dplyr::select(Package = package, Version = loadedversion, Source = source) |>
-    dplyr::mutate(Attribution = purrr::map_chr(Package, text_cite))
+    dplyr::mutate(
+      bibtex = purrr::map_chr(Package, bibtexify)
+    )
 }
