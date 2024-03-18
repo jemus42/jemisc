@@ -10,6 +10,8 @@ status](https://www.r-pkg.org/badges/version/jemisc)](https://CRAN.R-project.org
 [![R build
 status](https://github.com/jemus42/jemisc/workflows/R-CMD-check/badge.svg)](https://github.com/jemus42/jemisc/actions)
 [![R-CMD-check](https://github.com/jemus42/jemisc/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/jemus42/jemisc/actions/workflows/R-CMD-check.yaml)
+[![No Maintenance
+Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 <!-- badges: end -->
 
 This is just a personal package for various, i.e. *misc* things.
